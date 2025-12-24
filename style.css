@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #2c3e50;
+  color: white;
+}
+
+.menu-btn {
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: white;
+}
+
+/* NAV */
+.nav {
+  display: none;
+  flex-direction: column;
+  background: #34495e;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  font-size: 130%;
+}
+
+.nav a {
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 120%;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+  /* margin-left: -100%; */
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.6);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* .hero button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  background: #e67e22; 
+  color: white;
+} */
+
+/* SECTIONS */
+.section {
+  padding: 2rem 1rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+  font-size: 120%;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SERVICES */
+.services div {
+  background: #f4f4f4;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* VIDEO */
+.video {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* AUDIO */
+audio {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.sermon{
+    background-color: #0db6b1;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    width: 20%;
+    height: 45px;
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 120%;
+}
+
+/* FOOTER */
+.footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* WHATSAPP */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  font-size: 1.8rem;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .services {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .services div {
+    width: 30%;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    width: auto;
+  }
+
+  .nav a {
+    margin-left: 1rem;
+  }
+}
+
+/* LARGE SCREENS */
+@media (min-width: 1440px) {
+  body {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
