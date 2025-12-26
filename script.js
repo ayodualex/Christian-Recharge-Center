@@ -25,15 +25,22 @@ document.getElementById("donateBtn").addEventListener("click", () => {
 const eventDate = new Date("December 26, 2025 16:00:00").getTime();
 const countdown = document.getElementById("countdown");
 
-setInterval(() => {
+const timer = setInterval(() => {
   const now = new Date().getTime();
   const diff = eventDate - now;
 
-  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const m = Math.floor((diff / (1000 * 60)) % 60);
+  if (diff <= 0) {
+    countdown.innerHTML = "Started";
+    clearInterval(timer);
+    return;
+  }
 
-  countdown.innerHTML = `${d} Days ${h} Hours ${m} Minutes`;
+  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+  countdown.innerHTML = `d Days{h} Hours m Minutes{s} Seconds`;
 }, 1000);
 
 /* SCROLL ANIMATION */
