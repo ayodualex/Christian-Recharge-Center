@@ -30,7 +30,7 @@ const timer = setInterval(() => {
   const diff = eventDate - now;
 
   if (diff <= 0) {
-    countdown.innerHTML = "Started";
+    countdown.innerHTML = "Started.......... Expecting you 😊.";
     clearInterval(timer);
     return;
   }
