@@ -31,7 +31,6 @@ body {
   display: none;
   flex-direction: column;
   background: #34495e;
-  position: fixed;
   top: 60px;
   right: 0;
   width: 100%;
