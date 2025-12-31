@@ -51,7 +51,7 @@ const timer = setInterval(() => {
   const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   const s = Math.floor((diff % (1000 * 60)) / 1000);
 
-  countdown.innerHTML = `d Days{h} Hours m Minutes{s} Seconds`;
+  countdown.innerHTML = `${d} Days ${h} Hours ${m} Minutes`;
 }, 1000);
 
 
