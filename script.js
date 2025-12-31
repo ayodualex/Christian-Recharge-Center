@@ -33,7 +33,7 @@ document.getElementById("donateBtn").addEventListener("click", () => {
 });
 
 /* COUNTDOWN */
-const eventDate = new Date("December 26, 2025 16:00:00").getTime();
+const eventDate = new Date("December 31, 2025 21:00:00").getTime();
 const countdown = document.getElementById("countdown");
 
 const timer = setInterval(() => {
