@@ -9,7 +9,7 @@ menuBtn.addEventListener("click", () => {
 
 navLinks.forEach(link => {
   link.addEventListener("click", () => {
-    if (window.innerWidth <= 956) {
+    if (window.innerWidth <= 1000) {
       nav.style.display = "none";
     }
   });
